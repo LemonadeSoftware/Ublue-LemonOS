@@ -92,8 +92,6 @@ modules:
       - libliftoff
       - pixman
       - waybar-git
-      - wayland
-      - wayland-protocols
       - xdg-desktop-portal-hyprland
       - xorg-x11-proto-devel
       - xorg-x11-server-Xwayland
