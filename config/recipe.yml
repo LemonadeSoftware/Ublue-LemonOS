@@ -24,7 +24,6 @@ modules:
     repos:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
       - https://download.docker.com/linux/fedora/docker-ce.repo
-      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
     install:
       # - micro
       # - starship
@@ -72,24 +71,6 @@ modules:
       - docker-compose-plugin
       - flatpak-builder
       - gparted
-      # Hyperland session : 
-      - aylurs-gtk-shell
-      - eww-wayland-git
-      - hyprland-autoname-workspaces
-      - hyprland-contrib
-      - hyprland-nvidia-git
-      - hyprland-plugins
-      - hyprpaper
-      - hyprpicker
-      - hyprshot
-      - kitty
-      - libdisplay-info
-      - libinput
-      - libliftoff
-      - pixman
-      - waybar-git
-      - xdg-desktop-portal-hyprland
-      - xorg-x11-proto-devel
 
     remove:
       #- mesa-va-drivers
