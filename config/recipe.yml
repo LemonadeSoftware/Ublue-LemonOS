@@ -75,12 +75,8 @@ modules:
       # Hyperland session : 
       - aylurs-gtk-shell
       - eww-wayland-git
-      - hyprland
       - hyprland-autoname-workspaces
       - hyprland-contrib
-      - hyprland-git
-      - hyprland-legacyrenderer
-      - hyprland-nvidia
       - hyprland-nvidia-git
       - hyprland-plugins
       - hyprpaper
@@ -94,7 +90,6 @@ modules:
       - waybar-git
       - xdg-desktop-portal-hyprland
       - xorg-x11-proto-devel
-      - xorg-x11-server-Xwayland
 
     remove:
       #- mesa-va-drivers
