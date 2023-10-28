@@ -5,6 +5,8 @@ ARCH=$(rpm -E '%_arch')
 KERNEL=$(rpm -q kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')
 RELEASE=$(rpm -E '%fedora')
 
+ls /usr/lib/modules/
+
 # Cloner le dépôt
 git clone https://github.com/nix-community/acpi_call.git /tmp/acpi_call
 
