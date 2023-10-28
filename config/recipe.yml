@@ -73,6 +73,7 @@ modules:
       - docker-compose-plugin
       - flatpak-builder
       - gparted
+      # Build acpi-module-deps
       - make
       - binutils
       - gcc
@@ -89,26 +90,6 @@ modules:
       - libstdc++-devel
       - glibc-devel
       - glibc-static
-      - zlib-devel
-      - openssl-devel
-      - libxml2-devel
-      - libxslt-devel
-      - libffi-devel
-      - readline-devel
-      - ncurses-devel
-      - libcurl-devel
-      - libpng-devel
-      - libjpeg-turbo-devel
-      - libtiff-devel
-      - libevent-devel
-      - sqlite-devel
-      - libyaml-devel
-      - libacl-devel
-      - libattr-devel
-      - libtool-ltdl-devel
-      - expat-devel
-      - pcre-devel
-      - libuuid-devel
 
 
     remove:
