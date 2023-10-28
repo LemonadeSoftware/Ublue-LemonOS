@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://gitlab.com/siphomateke/tongfang-control.git git clone /tmp/tongfang-control
+git clone https://gitlab.com/siphomateke/tongfang-control.git /tmp/tongfang-control
 
 cd /tmp/tongfang-control
 
