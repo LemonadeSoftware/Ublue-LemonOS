@@ -12,7 +12,7 @@ echo "Kernel SRC folder :"
 ls /usr/src/kernels/
 
 echo "LD path :"
-
+find /usr -name ld
 which ld
 
 # Cloner le dépôt
