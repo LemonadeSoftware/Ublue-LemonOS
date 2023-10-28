@@ -60,6 +60,7 @@ modules:
       - mangohud
       - dkms
       - kernel-devel
+      - binutils
       #- libappindicator
       #- libappindicator-gtk3
       #- https://github.com/MiMillieuh/tongfang-laptop-linux-guide/releases/download/ok/tuxedo-control-center-2.0.8-1.x86_64.rpm
