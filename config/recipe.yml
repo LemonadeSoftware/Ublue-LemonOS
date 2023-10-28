@@ -71,6 +71,7 @@ modules:
       - docker-compose-plugin
       - flatpak-builder
       - gparted
+      - make
 
     remove:
       #- mesa-va-drivers
