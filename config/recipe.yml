@@ -50,6 +50,7 @@ modules:
       - neofetch
       - ibus-typing-booster
       - libxcrypt-compat
+      - playerctl
       # - wine-devel
       # - wine-common
       # - nvidia-exec
