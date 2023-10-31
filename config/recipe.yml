@@ -49,6 +49,7 @@ modules:
       - gtk-murrine-engine
       - neofetch
       - ibus-typing-booster
+      - libxcrypt-compat
       # - wine-devel
       # - wine-common
       # - nvidia-exec
