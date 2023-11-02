@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
-name: ublue-tataru-os
+name: ublue-lemonos-nvidia
 # description will be included in the image's metadata
-description: Ublue personal os for my laptop I use TataruOS btw
+description: LemonOS
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-nvidia
