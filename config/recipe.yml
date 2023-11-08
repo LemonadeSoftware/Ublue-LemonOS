@@ -76,15 +76,7 @@ modules:
       - docker-compose-plugin
       - flatpak-builder
       - gparted
-      # Build acpi-module-deps
-      - make
-      - binutils
-      - gcc
-      - make
-      - autoconf
-      - automake
-      - libtool
-      - gdb
+      - sushi
       #Wayland GLFW :
       #- glfw
 
