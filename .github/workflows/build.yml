@@ -10,7 +10,8 @@ on: # https://docs.github.com/en/actions/using-workflows/events-that-trigger-wor
     - cron: "20 22 * * *"
   push:
     branches:
-      - live
+      - nvidia
+      - amd
       - template
       - main
     paths-ignore: # don't rebuild if only documentation has changed
@@ -158,7 +159,7 @@ jobs:
       - name: Push To GHCR
         uses: redhat-actions/push-to-registry@v2
         id: push
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/live'
+        if: github.event_name != 'pull_request' && github.ref != 'refs/heads/excluded-branch-1' && github.ref != 'refs/heads/excluded-branch-2'
         env:
           REGISTRY_USER: ${{ github.actor }}
           REGISTRY_PASSWORD: ${{ github.token }}
@@ -173,7 +174,7 @@ jobs:
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/live'
+        if: github.event_name != 'pull_request' && github.ref != 'refs/heads/excluded-branch-1' && github.ref != 'refs/heads/excluded-branch-2'
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
@@ -181,10 +182,10 @@ jobs:
 
       # Sign container
       - uses: sigstore/cosign-installer@v3.1.2
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/live'
+        if: github.event_name != 'pull_request' && github.ref != 'refs/heads/excluded-branch-1' && github.ref != 'refs/heads/excluded-branch-2'
 
       - name: Sign container image
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/live'
+        if: github.event_name != 'pull_request' && github.ref != 'refs/heads/excluded-branch-1' && github.ref != 'refs/heads/excluded-branch-2'
         run: |
           cosign sign -y --key env://COSIGN_PRIVATE_KEY ${{ steps.registry_case.outputs.lowercase }}/${{ steps.image_case.outputs.lowercase }}@${TAGS}
         env:
@@ -193,6 +194,6 @@ jobs:
           COSIGN_PRIVATE_KEY: ${{ secrets.SIGNING_SECRET }}
 
       - name: Echo outputs
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/live'
+        if: github.event_name != 'pull_request' && github.ref != 'refs/heads/excluded-branch-1' && github.ref != 'refs/heads/excluded-branch-2'
         run: |
           echo "${{ toJSON(steps.push.outputs) }}"
