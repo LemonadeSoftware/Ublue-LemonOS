@@ -1,5 +1,9 @@
 ublue_variants:
-  - label: lemonadesoftware/ublue-lemonos-nvidia
+  - label: lemonadesoftware/ublue-lemonos-amd
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: startingpoint
+      - label: LemonOS-AMD
+  - label: lemonadesoftware/ublue-lemonos-nvidia
+    ks: /kickstart/ublue-os-nvidia.ks
+    flavors:
+      - label: LemonOS-NVIDIA
