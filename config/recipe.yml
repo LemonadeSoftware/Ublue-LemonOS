@@ -1,11 +1,11 @@
 # image will be published to ghcr.io/<user>/<name>
-name: ublue-tataru-os
+name: ublue-lemonos-nvidia
 # description will be included in the image's metadata
-description: A cringe personal Ublue made for the glory of Tataru Taru ! 
+description: LemonOS
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-nvidia
-image-version: latest # latest is also supported if you want new updates ASAP
+image-version: 39 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -76,7 +76,23 @@ modules:
       - docker-compose-plugin
       - flatpak-builder
       - gparted
-      - sushi
+      # Build acpi-module-deps
+      - make
+      - binutils
+      - gcc
+      - make
+      - autoconf
+      - automake
+      - libtool
+      - gdb
+      - valgrind
+      - cmake
+      - ninja-build
+      - flex
+      - bison
+      - libstdc++-devel
+      - glibc-devel
+      - glibc-static
       #Wayland GLFW :
       #- glfw
 
@@ -154,3 +170,4 @@ modules:
       - signing.sh
       - acpi_call-module.sh
       - tongfang-contols.sh
+      - ApplyLemon.sh

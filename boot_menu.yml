@@ -1,5 +1,5 @@
 ublue_variants:
-  - label: mimillieuh/ublue-tataru-os
+  - label: lemonadesoftware/ublue-lemonos-nvidia
     ks: /kickstart/ublue-os.ks
     flavors:
       - label: startingpoint
